@@ -66,3 +66,11 @@ Make STAR index folder readme:
 STAR --runThreadN 12 --runMode genomeGenerate --sjdbGTFfile bl6.gtf --genomeDir bl6.starIndex --outFileNamePrefix bl6.star. --genomeFastaFiles bl6.fa
 
 
+#############################
+
+gtf summary file readme:
+
+The file {WRKDIR}/src/{STRAIN}/{STRAIN}.gtf.sorted.tsv must exist. Download a gtf and use the following script:
+
+wget https://ftp.ensembl.org/pub/release-91/gtf/mus_musculus/Mus_musculus.GRCm38.91.gtf.gz 
+zcat Mus_musculus.GRCm38.91.gtf.gz | grep -v '^#' | perl -w /hps/nobackup/flicek/research/user/cander21/strandAsym/nascent_release/bin/gtfToTsv.pl | sort -k1,1V -nk2,2 > bl6.gtf.sorted.tsv

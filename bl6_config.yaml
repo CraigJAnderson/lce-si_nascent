@@ -1,0 +1,12 @@
+WRKDIR : "/hps/nobackup/flicek/research/user/cander21/strandAsym/nascent_release"
+STRAIN : "bl6"
+PICARD_LOC : "/hps/nobackup/flicek/research/user/cander21/bin"
+cluster: bsub
+jobs: 25
+####all of the following MUST be in ${WRKDIR}/src/${STRAIN}
+SAMPLE_LIST : "bl6_sample_list.txt"
+ANNOTATION : "bl6_protein_coding_whole_genes.gff"
+CHROM_SZ : "bl6.chromSize.main"
+BIOMART_ANNO : "bl6_dnds_biomart.csv"
+STAR_INDEX : "bl6.starIndex"
+EXONS_ANNO : "bl6.exons.bed"
