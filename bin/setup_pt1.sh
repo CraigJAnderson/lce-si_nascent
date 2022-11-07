@@ -12,7 +12,9 @@ ANNOTATION_PTH=$7
 cd ${WRKDIR}/src/${STRAIN}
 
 #see making exon boundaries readme
-awk '{ print $1"\t"$2"\t"$3"\t"$4";"$5"\t"$6"\t-\t"$7"\t"$8"\texon"}' ${EXONS_ANNO} > exons.bed
+#sed 's/\t1\t/\t+\t/g' ${EXONS_ANNO} | sed 's/\t-1\t/\t-\t/g' | awk '{ print $1"\t"$2"\t"$3"\t"$4";"$5";1\t"$6"\t-\t"$7"\t"$8"\texon"}' > exons.bed
+
+sed 's/\t1\t/\t+\t/g' ${EXONS_ANNO} | sed 's/\t-1\t/\t-\t/g' | awk '{ print $1"\t"$2"\t"$3"\t"$4";"$5"\t"$6"\t"$7"\t"$8"\texon"}' > exons.bed
 
 ##need to generate non-overlapping features for counting over, first need gtf with no overlaps- get parts of features with greater than 1 coverage
 bedtools genomecov -i ${ANNOTATION_PTH} -g ${CHROM_SZ} -bg | awk '{ if ($4 >1) print $0}' > OVERLAPS_${ANNOTATION}
