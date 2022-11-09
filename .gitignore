@@ -2,6 +2,8 @@ data/*
 analysis/*
 output/*
 .snakemake
-log*.error
-log*.oout
+log_bl6.error
+log_bl6.out
+log_c3h.error
+log_c3h.out
 !.gitignore
