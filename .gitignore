@@ -2,6 +2,6 @@ data/*
 analysis/*
 output/*
 .snakemake
-log*.e
-log*.o
+log*.error
+log*.oout
 !.gitignore
