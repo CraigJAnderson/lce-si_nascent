@@ -1,0 +1,43 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsf@hl-codon-02-03>
+Subject: Job 611266: <c3h_over_lord> in cluster <codon> Exited
+
+Job <c3h_over_lord> was submitted from host <hl-codon-101-04> by user <cander21> in cluster <codon> at Wed Nov  9 14:47:52 2022
+Job was executed on host(s) <20*hl-codon-02-03>, in queue <standard>, as user <cander21> in cluster <codon> at Wed Nov  9 14:47:53 2022
+</homes/cander21> was used as the home directory.
+</hps/nobackup/flicek/research/user/cander21/strandAsym/nascent_release> was used as the working directory.
+Started at Wed Nov  9 14:47:53 2022
+Terminated at Wed Nov  9 14:47:58 2022
+Results reported at Wed Nov  9 14:47:58 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+snakemake --snakefile snakefile -p -j20 --rerun-incomplete --configfile /hps/nobackup/flicek/research/user/cander21/strandAsym/nascent_release/c3h_config.yaml
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   6.77 sec.
+    Max Memory :                                 31 MB
+    Average Memory :                             31.00 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               29969.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   4 sec.
+    Turnaround time :                            6 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <log_c3h.error> for stderr output of this job.
+

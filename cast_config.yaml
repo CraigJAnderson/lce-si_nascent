@@ -1,0 +1,12 @@
+WRKDIR : "/hps/nobackup/flicek/research/user/cander21/strandAsym/nascent_release"
+STRAIN : "cast"
+PICARD_LOC : "/hps/nobackup/flicek/research/user/cander21/bin"
+cluster: bsub
+jobs: 25
+####all of the following MUST be in ${WRKDIR}/src/${STRAIN}
+SAMPLE_LIST : "cast_sample_list.txt"
+ANNOTATION : "cast_protein_coding_whole_genes.gff"
+CHROM_SZ : "cast.chromSize.main"
+BIOMART_ANNO : "cast_dnds_biomart.csv"
+STAR_INDEX : "cast.starIndex"
+EXONS_ANNO : "cast.exons.bed"
